@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Debugging</title>
+    <style>
+        .container {
+            width: 300px;
+            border: 2px solid red;
+        }
+
+        .element {
+            width: 100%;
+            padding: 20px;
+            background-color: lightblue;
+            /* Fixes the overflowing issue */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="element">
+            This element won't overflow because of box-sizing: border-box.
+        </div>
+    </div>
+</body>
+</html>
